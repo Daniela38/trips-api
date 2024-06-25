@@ -12,6 +12,11 @@
     gap: 15px;
 }
 
+.dropdown-item.active, .dropdown-item:active {
+    background-color: rgb(247, 247, 247) !important;
+    color: black !important;
+}
+
 .bi-person {
     margin-right: 5px;
     width: 20px;
