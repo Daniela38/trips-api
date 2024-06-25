@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(247, 247, 247);
+}
+
+.footer {
+    display: flex;
+    margin: 30px;
+    justify-content: space-between;
+}
+
+.footer svg {
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+ul {
+    display: flex;
+}
+
+.footer nav ul li {
+    list-style: none;
+}
+
+.link {
+    color: black;
+}

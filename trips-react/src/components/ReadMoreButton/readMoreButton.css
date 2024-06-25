@@ -1,0 +1,17 @@
+
+.custom-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background-color: rgb(129, 129, 129);
+    border-color: rgb(109, 109, 109);
+    
+}
+
+.btn-primary:hover {
+    background-color: rgb(71, 71, 71);
+    border-color: rgb(31, 31, 31);
+}

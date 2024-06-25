@@ -1,0 +1,17 @@
+
+h2 {
+    margin: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.form-floating {
+    max-width: 300px;
+    width: 100%;
+    margin-bottom: 15px;
+}

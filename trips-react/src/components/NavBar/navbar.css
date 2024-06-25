@@ -1,0 +1,19 @@
+.style-navbar {
+    background-color: rgb(247, 247, 247);
+    display: flex;
+}
+
+.logo{
+    width: 15%;
+    border-radius: 10px;
+}
+
+.navbar-nav {
+    gap: 15px;
+}
+
+.bi-person {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+}
