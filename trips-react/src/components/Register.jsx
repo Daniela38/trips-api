@@ -37,15 +37,23 @@ export default function Register(){
     return(
         <div>
             <h2>Registrate</h2>
-            <form onSubmit={handleSubmitRegister}>
-                <label>Nombre</label>
-                <input type="text" name="first_name" value={formData.first_name} onChange={handleChangeRegister}/>
-                <label>Apellido</label>
-                <input type="text" name="last_name" value={formData.last_name} onChange={handleChangeRegister}/>
-                <label>Email</label>
-                <input type="email" name="email" value={formData.email} onChange={handleChangeRegister}/>
-                <label>Contraseña</label>
-                <input type="password" name="password" value={formData.password} onChange={handleChangeRegister}/>
+            <form onSubmit={handleSubmitRegister} className="form">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" name="first_name" value={formData.first_name} onChange={handleChangeRegister}/>
+                <label for="floatingInput">Nombre</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInput" name="last_name" value={formData.last_name} onChange={handleChangeRegister}/>
+                <label for="floatingInput">Apellido</label>
+            </div>
+            <div class="form-floating">
+                <input type="email" class="form-control" id="floatingInput" name="email" value={formData.email} onChange={handleChangeRegister}/>
+                <label for="floatingInput">Email</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" name="password" value={formData.password} onChange={handleChangeRegister}/>
+                <label for="floatingPassword">Contraseña</label>
+            </div>
                 <input type="submit" />
             </form>
         </div>
