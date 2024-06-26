@@ -18,4 +18,17 @@
 
 th {
     padding: 15px;
+    font-size: 1.2rem;
+}
+
+td {
+    font-size: 1.1rem;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.total-btn {
+    margin-top: 10px;
 }

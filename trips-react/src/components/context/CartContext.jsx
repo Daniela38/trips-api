@@ -23,8 +23,12 @@ function CartProvider(props) {
         setCart(newCart);
     }
 
+    function clearCart() {
+        setCart([]);
+    }
+
     return(
-        <Provider value={{cart: cart, isItemInCart, addItem}}>
+        <Provider value={{cart: cart, isItemInCart, addItem, clearCart}}>
             {props.children}
         </Provider>
     )
