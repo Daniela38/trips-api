@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 export default function Register(){
 
@@ -10,6 +12,8 @@ export default function Register(){
         password: '',
         role: 'user'
     });
+
+    const navigate = useNavigate();
     
     const handleChangeRegister = (e) => {
         setFormData({...formData, [e.target.name]: e.target.value});
@@ -25,10 +29,14 @@ export default function Register(){
                 },
                 body: JSON.stringify(formData)
             });
-            console.log('la respuesta es ' + response)
             const result = await response.json();
-            console.log(result);
-
+            const registerSuccess = await Swal.fire({
+                title: "Registro exitoso",
+                text: `¡Hola ${formData.first_name}!`,
+                icon: "success",
+                timer: 1500
+            })
+            navigate('/');
         } catch(error) {
             throw new Error(error.message);
         }

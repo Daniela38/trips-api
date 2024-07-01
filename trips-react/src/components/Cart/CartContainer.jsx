@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
-import { cartContext } from "../context/CartContext";
+import { appContext } from "../context/AppContext";
 import './cartContainer.css';
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
 export default function CartContainer() {
     
-    const {cart, clearCart} = useContext(cartContext);
+    const {cart, clearCart} = useContext(appContext);
 
     const navigate = useNavigate();
 

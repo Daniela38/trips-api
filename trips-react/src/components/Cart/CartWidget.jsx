@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import './cartWidget.css'
 import { useContext } from "react";
-import { cartContext } from "../context/CartContext";
+import { appContext } from "../context/AppContext";
 
 function CartWidget() {
 
-    const {cart} = useContext(cartContext);
+    const {cart} = useContext(appContext);
 
     function count() {
         let amount = 0;

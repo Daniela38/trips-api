@@ -5,7 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { CartProvider } from './components/context/CartContext';
+import { AppProvider } from './components/context/AppContext';
 import CartContainer from './components/Cart/CartContainer';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
@@ -16,7 +16,7 @@ function App() {
   return (
 
     <div className="App">
-      <CartProvider>
+      <AppProvider>
       <BrowserRouter>
         <NavBar/>
         <Routes>
@@ -29,7 +29,7 @@ function App() {
         </Routes>
         <Footer/>
       </BrowserRouter>
-      </CartProvider>
+      </AppProvider>
     </div>
   );
 }

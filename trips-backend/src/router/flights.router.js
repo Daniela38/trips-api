@@ -14,6 +14,7 @@ router.delete('/:id', passport.authenticate('current'), flightController.checkAd
 
 router.post('/register', passport.authenticate('register', {session: false}), sessionsController.register);
 router.post('/login', passport.authenticate('login'), sessionsController.login);
+router.post('/logout', sessionsController.logout);
 router.get('/current', passport.authenticate('current', {session: false}), sessionsController.current);
 
 export default router;

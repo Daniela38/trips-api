@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState} from "react";
 import Swal from "sweetalert2";
+import { appContext } from "../context/AppContext";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import './login.css';
@@ -11,7 +12,7 @@ export default function Login() {
         email: '',
         password: ''
     });
-
+    const {setUser} = useContext(appContext);
     const navigate = useNavigate();
 
     const handleChangeLogin = (e) => {
@@ -28,7 +29,16 @@ export default function Login() {
                 },
                 body: JSON.stringify(formLogin)
             });
+            if (response.status === 401) {
+                await Swal.fire({
+                    title: "Usuario y/o contraseña incorrectos",
+                    icon: "error",
+                    timer: 2000
+                })
+                return;
+            }
             const result = await response.json();
+            setUser({email: formLogin.email});
             const loginSuccess = await Swal.fire({
                 title: "Login exitoso",
                 icon: "success",

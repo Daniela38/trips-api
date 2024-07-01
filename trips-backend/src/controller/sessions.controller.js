@@ -10,6 +10,11 @@ const login = (req, res) => {
         .send({message: 'Cookie set', jwt: req.user});
 }
 
+const logout = (req, res) => {
+    req.session.destroy();
+    res.status(200).send({message: "Succesfully logout"});
+}
+
 const current = (req, res) => {
     console.log("El user es " + JSON.stringify(req.user))
     res.status(200).send(req.user);
@@ -18,5 +23,6 @@ const current = (req, res) => {
 export default {
     register,
     login,
-    current
+    current,
+    logout
 }

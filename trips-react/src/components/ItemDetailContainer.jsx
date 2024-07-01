@@ -3,7 +3,7 @@ import productsData from "./data";
 import {useParams} from "react-router-dom";
 import ItemDetail from './ItemDetail/ItemDetail';
 import ItemCount from "./ItemCount/ItemCount";
-import { cartContext } from "./context/CartContext";
+import { appContext } from "./context/AppContext";
 import { getFlightById } from "../api";
 
 function getSingleItem(id) {
@@ -24,7 +24,7 @@ export default function ItemDetailContainer() {
     const [product, setProduct] = useState({});
     const {id} = useParams();
     const {categoryUrl} = useParams();
-    const {addItem} = useContext(cartContext);
+    const {addItem} = useContext(appContext);
 
     useEffect(() => {
         const fetchFlight = async() => {
