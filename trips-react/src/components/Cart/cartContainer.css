@@ -25,8 +25,13 @@ td {
     font-size: 1.1rem;
 }
 
+.bi-trash3 {
+    cursor: pointer;
+}
+
 .total {
     font-weight: bold;
+    padding-top: 15px;
 }
 
 .total-btn {

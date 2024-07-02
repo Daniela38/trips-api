@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './readMoreButton.css';
-import MyButton from "../MyButton";
-
 
 export default function ReadMoreButton(props) {
 
